@@ -72,18 +72,14 @@ return 0;
 
 Output:
 
-
-![image](https://github.com/user-attachments/assets/4dfa542d-2a99-4542-a91e-50306c166896)
-
-
-
+<img width="414" height="301" alt="Screenshot 2026-03-20 150556" src="https://github.com/user-attachments/assets/9fe640b2-2953-4d15-9cfc-b130ac1ee91f" />
 
 
 
 Result:
 Thus, the program is verified successfully
  
-EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
+## EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
 Aim:
 To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
 Algorithm:
@@ -126,14 +122,14 @@ int main() {
 Output:
 
 
-![image](https://github.com/user-attachments/assets/1afc61f8-b0fc-4287-94c7-1ac33a420dd6)
+<img width="495" height="235" alt="Screenshot 2026-03-20 151204" src="https://github.com/user-attachments/assets/c87fc8d8-a21a-4019-8236-5c826ac1d7b2" />
 
 
 
 Result:
 Thus, the program is verified successfully
 
-EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
+## EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
 Aim:
 To write a C program to print all of its permutations in strict lexicographical order.
 
@@ -218,7 +214,7 @@ Output:
 Result:
 Thus, the program is verified successfully
  
-EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS
+## EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS
 SHOWN BELOW.
 Aim:
 To write a C program to print a pattern of numbers from 1 to n as shown below.
@@ -262,7 +258,7 @@ return 0;
 Output:
 
 
-![image](https://github.com/user-attachments/assets/a8030489-56c8-451a-9b34-4479aa1e18a4)
+<img width="383" height="532" alt="Screenshot 2026-03-20 151354" src="https://github.com/user-attachments/assets/da650bff-c42b-4909-a387-c05e864e5d3f" />
 
 
 
@@ -272,7 +268,7 @@ Output:
 Result:
 Thus, the program is verified successfully
 
-EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
+## EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
 
 Aim:
 
@@ -313,7 +309,7 @@ int main() {
 Output:
 
 
-![image](https://github.com/user-attachments/assets/941718ca-ac6d-4727-99a2-5fbe8ecae89e)
+<img width="528" height="297" alt="Screenshot 2026-03-20 151509" src="https://github.com/user-attachments/assets/ea5a2745-a424-4ba4-9466-09cd7df07675" />
 
 
 
