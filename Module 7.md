@@ -17,33 +17,38 @@ Else
 6.	Return 0
  
 ## Program:
+```
+#include <stdio.h>
 
-       #include<stdio.h> 
-        struct eligib
-        {
-              int age;
-              char n[4];
-        };
-        int main()
-        {
-               struct eligib e;
-               scanf("%d%s",&e.age,e.n);
-               if(e.age<=6)
-                {
-                    printf("Age:%d\nName:%svaccine:%d\neligibility:no",e.age,e.n,e.age);
-               }
-               else
-               {
-                    printf("Age:%d\nName:%svaccine:%d\neligibility:yes",e.age,e.n,e.age);
-               }
- 
-         }
+struct eligible {
+    int age;
+    char n[50];
+};
 
+int main() {
+    struct eligible e;
+
+    printf("Enter name: ");
+    scanf("%s", e.n);
+
+    printf("Enter age: ");
+    scanf("%d", &e.age);
+
+    if (e.age <= 6) {
+        printf("Vaccine Eligibility: No\n");
+    } else {
+        printf("Vaccine Eligibility: Yes\n");
+        printf("Name: %s\n", e.n);
+        printf("Age: %d\n", e.age);
+    }
+
+    return 0;
+}
+```
 
 ## Output:
 
-![437295418-875d7abd-3282-4d64-96f7-b69834282f0a](https://github.com/user-attachments/assets/bbf7f61d-81ff-47ae-a7d7-85e1e36215dd)
-
+<img width="400" height="315" alt="Screenshot 2026-03-20 130305" src="https://github.com/user-attachments/assets/9ec4ebbe-7f20-4dd4-8230-d35801c4ac41" />
 
 
 ## Result:
@@ -65,35 +70,39 @@ To write a C program for passing structure as function and returning a structure
 7.	Return 0
  
 ## Program:
+```
+#include <stdio.h>
 
-       #include<stdio.h>
-       struct numbers{
-               int a;
-               int b;
-       }n;
-       int add(struct numbers n);
-       int main()
-       {
-           scanf("%d %d ",&n.a,&n.b);
-           printf("%d",add(n));
-       }
-       int add(struct numbers n)
-       {
-            return n.a+n.b;
-       }
+struct numbers {
+    int a, b;
+};
+struct numbers add(struct numbers n);
 
+int main() {
+    struct numbers n, result;
 
+    printf("Enter value of a: ");
+    scanf("%d", &n.a);
 
+    printf("Enter value of b: ");
+    scanf("%d", &n.b);
 
+    result = add(n);
 
+    printf("Sum = %d\n", result.a);
+
+    return 0;
+}
+
+struct numbers add(struct numbers n) {
+    struct numbers res;
+
+    res.a = n.a + n.b;  
+    return res;         
+}
+```
 ## Output:
-   
-   ![437295527-c4fda8ea-7b67-47c2-9123-dfdae6e283a6](https://github.com/user-attachments/assets/22589bbf-cfd5-4a85-8783-af5a00ecfd99)
-
-
-
-
-
+   <img width="379" height="242" alt="Screenshot 2026-03-20 131046" src="https://github.com/user-attachments/assets/d1b49433-95f7-4aa1-ad76-0e718298fcaf" />
 
 
 ## Result:
@@ -124,38 +133,25 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 ## Program:
-
-            #include <stdio.h>
-            int main()
-            {
-                 FILE *p;
-                 char name[30];
-                 scanf("%s",name);
-                 printf("%s File Created Successfully",name); 
-                 p=fopen("name","w");
-                 printf("\n%s File Opened",name);
-                 fclose(p);
-                 printf("\n%s File Closed",name);
-           }
-
-
-
-
-
+```
+        #include <stdio.h>
+        int main()
+        {
+             FILE *p;
+             char name[30];
+             printf("ENTER FILE NAME: ");
+             scanf("%s",name);
+             printf("%s File Created Successfully",name); 
+             p=fopen("name","w");
+             printf("\n%s File Opened",name);
+             fclose(p);
+             printf("\n%s File Closed",name);
+       }
+```
+         
 ## Output:
 
-
-
-![437295636-26ae7632-11c8-4c2e-9627-3848ad724e46](https://github.com/user-attachments/assets/86a2a691-e2f1-4bc7-b5f2-f0c8d098392b)
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/862e6781-e3d5-43c6-8694-65627425d9cb)
 
 
 ## Result:
@@ -211,12 +207,7 @@ Use scanf to input the file name into the name array and the number of strings i
 
 
 ## Output:
-
-
-
- ![437295751-4a926356-22df-4a11-a5f8-6f7b374e2a86](https://github.com/user-attachments/assets/612f8dfc-29a7-462f-9eea-4c419e98e649)
-
-
+![image](https://github.com/user-attachments/assets/889bf062-4a5b-48b8-bf86-287568fe474c)
 
 
 ## Result:
@@ -258,78 +249,36 @@ The aim of this program is to dynamically allocate memory to store information a
 13.End the program by returning 0.
 
 ## Program:
-
-~~~
-#include<stdio.h>
-#include<string.h>
-struct student {
-    char name[20];
+```
+#include <stdio.h>
+struct Student {
+    char name[50];
     int roll;
-    char gender;
-    float marks[5];
-    float total;
-    float avg;
-}s1,s2;
-int main()
-{
-   strcpy(s1.name,"Kannan");
-   s1.roll = 33;
-   s1.gender = 'M';
-   s1.marks[0] = 87;
-   s1.marks[1] = 84;
-   s1.marks[2] = 82;
-   s1.marks[3] = 96;
-   s1.marks[4] = 78;
-   for(int i=0;i<5;i++){
-       s1.total += s1.marks[i]; 
-   }
-   s1.avg = s1.total/5;
-   
-   
-    strcpy(s2.name,"Saveetha");
-    s2.roll = 43;
-    s2.gender = 'M';
-    s2.marks[0] = 76;
-    s2.marks[1] = 98;
-    s2.marks[2] = 68;
-    s2.marks[3] = 87;
-    s2.marks[4] = 93;
-    for(int i=0;i<5;i++){
-        s2.total += s2.marks[i]; 
-    }
-   s2.avg = s2.total/5;
-   
-   printf("Name:%s\n",s1.name);
-   printf("Roll:%d\n",s1.roll);
-   printf("Gender:%c\n",s1.gender);
-   printf("Total:%.0f\n",s1.total);
-   printf("Average:%.2f\n",s1.avg);
-   
-   printf("Name:%s\n",s2.name);
-   printf("Roll:%d\n",s2.roll);
-   printf("Gender:%c\n",s2.gender);
-   printf("Total:%.0f\n",s2.total);
-   printf("Average:%.2f\n",s2.avg);
-   
-   return 0;
+    float marks;
+};
+
+int main() {
+    struct Student s;
+    printf("Enter student name: ");
+    fgets(s.name, sizeof(s.name), stdin);
+
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
+
+    printf("Enter marks: ");
+    scanf("%f", &s.marks);
+    printf("\n--- Student Details ---\n");
+    printf("Name       : %s", s.name);
+    printf("Roll No.   : %d\n", s.roll);
+    printf("Marks      : %.2f\n", s.marks);
+
+    return 0;
 }
 
-~~~
-
-
-
-
+```
 ## Output:
 
-
-
-<img width="438" height="311" alt="image" src="https://github.com/user-attachments/assets/c7f90c0d-5d99-4838-9640-08cce7f898aa" />
-
-
-
-
-
-
+<img width="427" height="242" alt="Screenshot 2026-03-20 135408" src="https://github.com/user-attachments/assets/f622180a-728f-460e-92ff-14ad35689b7b" />
 
 
 ## Result:
